@@ -1,0 +1,38 @@
+1. En un archivo de texto separado que debes crear, escribe explicaciones de los siguientes conceptos como si se lo estuvieras explicando a un niño de 12 años. Hacer esto te ayudará a descubrir rápidamente cualquier agujero en tu comprensión.
+
+	* Variables: Son espacios en memoria que utilizamos para almacenar valores. Podemos crearlas y a su vez tambien podemos asignarles un valor determinado. 
+	En las variables podemos guardar diferentes tipos de datos (strings, numbers, booleans, null, arrays , etc) para luego reutilizarlos. 
+	Dentro de JavaScript existen tres palabras reservadas para definir una variable. Ellas son :
+	A- Var
+	B-Let: Cuando usamos let para definir una variable , ésta solo sera accesible en el bloque de código en el que fue declarada. Los bloques de código son normalmente determinados por las llaves {}. 
+	C-Const: Las variables declaradas con const funcionan igual que las variables 'let', estarán disponibles solo en el bloque de código en el que se hayan declarado. Pero, al contrario de "let", una vez que le asignemos un valor , no podremos cambiarlo. 
+
+	* Strings: Son cadenas de caracteres.Son textos alfanumericos  (Pueden incluir letras y  números) y pueden tener cualquier longitud . El elemento que se utiliza para indicarle a la pc que queremos usar un string es atraves de las " " o ' ' .
+	
+	* Funciones (argumentos, `return`): Una función es un bloque de código que podemos invocar todas las veces que necesitemos . Puede realizar una tarea específica y retornar un valor. Nos permite agrupar el codigo que vayamos a usar muchas veces. 
+	Estructura de una funcion :
+	Para indicarle a la pc que queremos declarar una función utilizamos la palabra reservada "function".
+	Luego, podemos , de manera optativa asignarle un nombre para poder invocarla. El siguiente paso es escribir los parentesis (), donde dentro de ellos , de manera optativa podemos incluiir los parametros de la funcion . Los parametros o tambien llamados argumentos , representan la información ( o tipo de dato ) que va a recibir la funcion para funcionar. En caso de recibir mas de un parametro , hay que separar a los mismos mediante el uso de la coma (",") . Si la funcion no lleva parametros escribimos los parentesis sin nada adentro.
+	
+	Dentro de nuestra funcion podemos acceder a los parametros como si fueran variables . Es decir, con solo escribir los nombres de los parametros , podremos trabajar con ellos.  
+	
+	Una vez indicados los parametros tenemos que proceder a escribir el cuerpo de la funcion. Entre las llaves de apertura y cierre escribimos la logica de nuestra funcion, es decir el codigo que queremos que se ejecute cada vez que la invoquemos. 
+
+	Es muy comun a la hora de escribir una funcion que queramos devolver al exterior el resultado del proceso que estamos haciendo dentro de ella . Para eso, utilizamos la palabra reservada 'return' seguida de lo que queremos retornar.  
+
+	Este seria un ejemplo de función sencilla. 
+	
+	function sumar (numeroA,numeroB) {
+		return numeroA + numeroB
+	}
+
+
+	* Declaraciones `if`: Estas declaraciones sirven para indicarle a la pc que vamos a hacer uso de los condicionales. Estos nos permiten evaluar diferentes condiciones y realizar distintas acciones segun el resultado de esas evaluaciones. En el caso de que la condicion establecida dentro de los parentesis del if se cumpla, es decir que el resultado de la misma sea verdadera (true), el codigo indicado dentro de las llaves se ejecutara.
+
+	Estructura del if :
+
+	if (aqui se coloca la condicion){
+		//aqui se indica el codigo que queremos ejecutar si la condicion es verdadera
+	}
+	* Valores booleanos (`true`, `false`): Son datos de tipo verdadero (true) o false (falso), es decir que activan o desactivan cierta parte del programa segun el input recibido.
+
