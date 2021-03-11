@@ -1,0 +1,36 @@
+Ciclo for:
+Los ciclos nos permiten repetir instrucciones de manera sencilla . Podemos hacerlo una determinada cantidad de veces , o mientras se cumpla una condicion.
+
+Estructura basica del ciclo for:
+
+for (inicio; condicion; modificador){
+    // Codigo que se ejecutara en cada repeticion
+}
+
+Dentro del () el ciclo for consta de 3 partes. En conjunto, nos permite determinar de qué manera se van a realizar las repeticiones y definir las instrucciones que queremos que se lleven a cabo en cada una de ellas.  
+
+inicio---> Antes de arrancar el ciclo , se establece el valor inicial de nuestro contador.
+
+Condición: Antes de ejecutar el código en cada vuelta , se pregunta si la condicion resulta verdadera o falsa. Si es verdadera, continua con nuestras instrucciones .
+Si es falsa, se detiene el ciclo.
+
+Modificador (incremento / decremento) ---> Luego de ejecutar nuestras instrucciones, se modifica nuestro contador de la manera que hayamos especificado. En este caso , se le suma 1, pero podemos hacer la cuenta que queramos.
+
+
+----------------------------------------------------------------------------------------------------------------------------------------
+`&&`, `||`, `!`
+
+Todos los simbolos mencionados anteriormente se los denomina operadores logicos. Estos permiten combinar valores booleanos, el resultado también devuelve un booleano.
+
+Existen tres operadores:
+
+A- && (and)
+
+Todos los valores evaluados deben ser true para que el resultado final de la operacion final sea true. 
+
+B- || (or)
+Al menos un valor a evaluar tiene que ser true para que toda la operacion global sea true.
+
+C- NOT (!) niega la condicion, si es true , el valor final sera false y viceversa. 
+
+NOTA: Los operadores logicos siempre devolveran un booleano, es decir true o false como resultado. 
