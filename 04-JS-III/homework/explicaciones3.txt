@@ -1,0 +1,6 @@
+Arrays:
+* Son un tipo de dato que nos permiten generar una coleccion de datos ordenados.\
+*Utilizamos [] para indicar el inicio y el fin de un array. Utilizamos "," para separar sus elementos.
+*Dentro, podemos almacenar la cantidad de elementos que queramos sin importar el tipo de dato de cada uno.
+Es decir podemos tener distintos tipos de datos (strings, number, booleanos, etc) dentro del array.
+*Cada dato de un array ocupa una posicion numerada conocida como  indice. La primera posicion de un array es siempre 0.
