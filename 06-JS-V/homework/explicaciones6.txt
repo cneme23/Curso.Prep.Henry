@@ -1,0 +1,36 @@
+¿Qué es un constructor?
+
+Es un metodo llamado en el momento de creacion de instancias.
+En JavaScript, la funcion sirve como el constructor del objeto, por lo que no hay necesidad de definir explicitamente un metodo constructor.
+
+El constructor se usa para establecer las propiedades del objeto o para llamar a los metodos para preparar el objeto para su uso .
+
+function Persona (){
+    alert ('Una instancia de Persona');
+
+}
+
+let persona1 = new Persona();
+let persona2 = new Persona();
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Prototype
+
+La creación de funciones es costosa (refiriéndonos a la capacidad de memoria de una computadora) y cada vez que creamos un nuevo objeto de clase con métodos, estamos recreando esos métodos en la memoria. Puede imaginar que si estamos creando miles de objetos de clase a partir de una clase con docenas de métodos, la memoria se acumulará rápidamente (20.000 - 40.000 métodos). Las clases tienen una forma única de establecer un método una vez y dar acceso a cada objeto de esa clase a esos métodos. Esto se llama el prototype. Cada clase tiene una propiedad prototype, que luego podemos establecer en métodos:
+
+function Usuario(nombre, github) {
+    this.nombre = nombre;
+    this.github = github;
+}
+
+Usuario.prototype.introduccion = function(){
+    return 'Mi nombre es ' + this.nombre + ', mi usuario de Github es ' + this.github + '.';
+}
+
+let juan = new Usuario('Juan', 'juan.perez');
+let antonio = new Usuario('Antonio', 'atralice');
+
+console.log(juan.introduccion()); // Mi nombre es Juan, mi usuario de Github es juan.perez.
+console.log(riley.introduccion()); // Mi nombre es Antonio, mi usuario de Github es atralice.
+Los métodos de prototype tienen acceso a la palabra clave this y, al igual que antes, siempre apuntará al objeto (a la izquierda del punto) que lo está llamando.

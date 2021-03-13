@@ -1,0 +1,25 @@
+Funcion Callback:
+
+Es una funcion que se pasa como argumento de otra funcion. 
+La funcion que lo recibe es quien se encarga de ejecutarla cuando sea necesario.
+
+Existen distintos tipos de callback:
+
+Anonimo:
+
+En este caso la función que pasamos como callback no tiene nombre. Es decir que es una función anónima.
+Como las funciones anónimas no pueden ser llamdas luego por su nombre , necesitamos escribrila dentro de la funcion que se encargara de llamar al callback.
+
+Ej:
+setTimeout (function (){
+    console.log('Hola mundo');
+}, 1000).
+
+Definido:
+
+La función que pasemos como callback puede ser una función definida previamente. Al momento de pasarla como parametro de otra funcion , nos referimos a la misma por su nombre. 
+
+let miCallback = () => console.log('Hola Mundo');
+setTimeout( miCallback,1000);
+
+Nota : cuando enviamos una funcion como parametro la escribimos sin los parentesis, ya que no queremos que se ejecute en ese momento . Sera la funcion que la recibe quien se encargara de ejecutarla.
