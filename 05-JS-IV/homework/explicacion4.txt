@@ -1,0 +1,130 @@
+Objetos y propiedades:
+
+En JavaScript, un Objeto es una entidad independiente con Propiedades. A su vez, esas Propiedades tienen valores.
+
+El concepto de Objetos puede compararse con entidades de la vida real. Por ejemplo, una persona representaría un Objeto con ciertas Propiedades: su color de pelo, cierta edad, la ciudad en la que vive, etc. Del mismo modo, los Objetos en JavaScript pueden tener Propiedades que definan sus características.
+
+Para declarar un Objeto, utilizamos llaves: { }.
+
+Los Objetos tienen Propiedades que se escriben en formato key-value pairs. Es decir, cada ítem viene de a pares. Por ejemplo, dentro de la clave (en inglés, key) nombre está el valor "Guillermo"; dentro de la clave edad está el valor "22", etc.
+Cada key-value pair va separada por comas.
+
+Las Propiedades de los Objetos suelen ser flexibles; por ejemplo, los valores incluyen números, palabras, otros Objetos, cadenas de caracteres e, incluso, Funciones.
+Importante: En caso de querer agregar números o dos (o más) palabras, deberás agregar un String.
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Metodos de un Objeto:
+
+Una propiedad puede almacenar cualquier tipo de dato. Si una propiedad almacena una funcion, diremos que es un metodo del objeto.
+
+Ej:
+
+let tenista = {
+    nombre: 'Roger',
+    apellido:'Federer',
+    saludar: function (){
+        return 'Hola me llamo Roger';
+    }
+};
+
+Para ejecutar el metodo de un objeto usamos la notacion objeto.metodo(), los parentesis del final son los que hacen que el metodo se ejecute. 
+
+console.log(tenista.saludar())-----> 'Hola me llamo Roger'
+
+----------------------------------------------------------------------------------------------------------------------------------------
+
+Bracket Notation Vs Dot Notation:
+
+Hay dos maneras de acceder a los valores de un Objeto en JavaScript:
+
+Bracket notation (del inglés Notación por corchetes)
+Dot notation (del inglés Notación por punto)
+Los valores guardados en los Objetos no tienen un orden (a diferencia de los Arreglos). Por lo tanto, no podemos acceder a ellos a través de un índice númerico.
+
+Veamos un ejemplo. Supongamos que tenemos un Objeto que representa un auto (marca Tesla, nuevo, modelo "Model Y", etc.).
+let auto = {
+marca: "Tesla",
+modelo: "Model Y",
+kilometros: 0,
+nuevo: true,
+arrancar: function() {
+        alert("el auto se enciende!")
+    }
+}
+
+Cómo Acceder A Los Valores De Un Objeto
+
+Escribí el nombre de la Variable.
+Escribí – en formato String – el nombre de la propiedad a la cual queremos acceder entre corchetes.
+Por ejemplo, si quisiéramos conocer el valor de la propiedad "marca":
+auto[“marca”]
+“Tesla”
+
+A su vez, si quisiéramos acceder al valor de "arrancar" (una Función):
+auto["arrancar"]
+ƒ () { // Esto nos indica que el valor de "arrancar" es una Función.
+        alert("el auto se enciende!") // Esto nos indica que el contenido de la Función es una alerta.
+    }
+
+Importante: Si la propiedad es una Función y querés activarla, agregá paréntesis después de cerrar los corchetes.
+auto["arrancar"]()
+
+
+------------------------------------------------------------------------------------------------------------------------------------
+
+Dot notation
+
+Otra manera de acceder a los valores de un Objeto es usando Dot notation (Notación por punto).
+Dot notation es una manera más fluida para acceder a los Objetos y da como resultado un código más simple de leer.
+Cómo Acceder A Los Valores De Un Objeto
+Siguiendo con el ejemplo anterior (del Objeto auto), seguí estos pasos:
+Escribí el nombre del Objeto.
+Poné un punto.
+Escribí el nombre de la propiedad a la cual querés acceder.
+
+Si quisiéramos conocer el valor de la propiedad nuevo:
+auto.nuevo
+true
+
+---------------------------------------------------------------------------------------------------------------------------------------
+
+For in:
+
+
+Los Objetos, a diferencia de los Arreglos, tienen Propiedades sin un orden numérico. Por eso, para recorrer un Arreglo podíamos usar forloop mientras que, con los Objetos, usaremos for...in.
+
+Este loop sirve para recorrer un Objeto y saber cuáles son sus Propiedades y Valores.
+Veamos su sintaxis:
+for(let propiedad in nombreDelObjeto) {
+// Acción que queremos que realice
+}
+
+El iterador for...in tomará alguna de las claves de las Propiedades del Objeto en cada vuelta.
+Veamos un ejemplo: supongamos que queremos recorrer el Objeto nuevaHeroina, que a su vez tiene tres Propiedades ( nombreAvenger, nombreHumano, poder).
+
+let nuevaHeroina = {
+   nombreAvenger: 'capitana marvel',
+   nombreHumano: 'carol danvers',
+   poder: 'ser archi fuerte y volar por el espacio',
+}
+
+En cada iteración, el loop for...in tomará el nombre de cada Propiedad de este Objeto:
+for (let propiedad in nuevaHeroina) {
+   console.log(propiedad)
+}
+
+Como resultado, veremos las siguientes claves en la consola:
+nombreAvenger
+nombreHumano
+poder
+Si utilizamos Bracket notation, cada iteración mostrará el Valor de cada una de las Propiedades del Objeto:
+for (let propiedad in nuevaHeroina) {
+   console.log(nuevaHeroina[propiedad])
+}
+capitana marvel
+carol danvers
+ser archi fuerte y volar por el espacio
+
+En este caso utilizamos Bracket notation, ya que Dot notation no acepta Variables. Intentará buscar el texto propiedad de forma literal y no lo encontrará (porque no existe).
+
+
